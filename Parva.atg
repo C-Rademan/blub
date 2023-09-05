@@ -235,11 +235,12 @@ PRODUCTIONS
 													SemError("unexpected subscript");
 													/* task 4: make a new entry for an array and insert into the symbol table as indexType array +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 													entry = new Entry();
-													entry.type = (indexType+1);
+													entry.type = (nullType);
 													entry.name = name;
 													entry.declared = true;
 													entry.kind = Kinds.Var;
 													Table.insert(entry);
+													des = newDestype(entry);
 													des.type --;
 													
 												}
